@@ -1,0 +1,30 @@
+################################################################################
+#
+# librealsense
+#
+################################################################################
+
+LIBREALSENSE_VERSION = 2.10.1
+LIBREALSENSE_SOURCE = v$(LIBREALSENSE_VERSION).tar.gz
+LIBREALSENSE_SITE = https://github.com/IntelRealSense/librealsense/archive
+LIBREALSENSE_INSTALL_STAGING = YES
+LIBREALSENSE_LICENSE = Apache-2.0
+LIBREALSENSE_LICENSE_FILES = COPYING, LICENSE
+
+LIBREALSENSE_DEPENDENCIES = libusb
+
+LIBREALSENSE_CONF_OPTS += \
+	-DBUILD_CV_EXAMPLES=OFF \
+	-DBUILD_EASYLOGGINGPP=OFF \
+	-DBUILD_EXAMPLES=OFF \
+	-DBUILD_GRAPHICAL_EXAMPLES=OFF \
+	-DBUILD_NODEJS_BINDINGS=OFF \
+	-DBUILD_PCL_EXAMPLES=OFF \
+	-DBUILD_PYTHON_BINDINGS=OFF \
+	-DBUILD_SHARED_LIBS=ON \
+	-DBUILD_UNIT_TESTS=OFF \
+	-DBUILD_WITH_OPENMP=ON \
+	-DBUILD_WITH_TM2=OFF \
+	-DUSE_SYSTEM_LIBUSB=ON
+
+$(eval $(cmake-package))

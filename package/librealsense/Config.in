@@ -1,0 +1,7 @@
+config BR2_PACKAGE_LIBREALSENSE
+	bool "librealsense"
+	select BR2_PACKAGE_LIBUSB
+	help
+	  librealsense provides access to Intel RealSense devices
+
+	  https://realsense.intel.com/
