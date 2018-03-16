@@ -1,0 +1,13 @@
+config BR2_PACKAGE_HYBRIDFUSION
+	bool "hybridfusion"
+	select BR2_PACKAGE_LIBREALSENSE
+	select BR2_PACKAGE_QT5
+	select BR2_PACKAGE_ZSTD
+	select BR2_PACKAGE_EIGEN
+	select BR2_PACKAGE_AVAHI
+	select BR2_PACKAGE_SYSTEMD
+
+	help
+	  Hybridfusion project
+
+	  https://github.com/sh0/hybridfusion

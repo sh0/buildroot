@@ -2029,4 +2029,8 @@ menu "Text editors and viewers"
 	source "package/vim/Config.in"
 endmenu
 
+menu "Fusionboard"
+	source "package/hybridfusion/Config.in"
+endmenu
+
 endmenu
